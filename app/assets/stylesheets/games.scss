@@ -1,0 +1,12 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  border: 2px solid black;
+  width: 15em;
+  height: 15em;
+  margin: 0;
+  cursor: pointer;
+}

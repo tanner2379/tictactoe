@@ -1,0 +1,93 @@
+<%= link_to "Back to Home", games_path %>
+<% if @game.complete %>
+  <% if @game.winner %>
+    <h1>Player <%= @game.winner %> Won!</h1>
+  <% else %>
+    <h1>This game is a draw</h1>
+  <% end %>
+<% end %>
+<div class="board">
+  <%= link_to moves_path(game: @game, column: 1, row: 1), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("111") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("211") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+  <%= link_to moves_path(game: @game, column: 2, row: 1), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("121") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("221") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+  <%= link_to moves_path(game: @game, column: 3, row: 1), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("131") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("231") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= link_to moves_path(game: @game, column: 1, row: 2), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("112") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("212") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+  <%= link_to moves_path(game: @game, column: 2, row: 2), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("122") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("222") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+  <%= link_to moves_path(game: @game, column: 3, row: 2), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("132") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("232") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= link_to moves_path(game: @game, column: 1, row: 3), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("113") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("213") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+  <%= link_to moves_path(game: @game, column: 2, row: 3), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("123") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("223") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+  <%= link_to moves_path(game: @game, column: 3, row: 3), method: :post do %>
+    <div class="box">
+      <% if @moves.include?("133") %>
+        <h1>X</h1>
+      <% elsif @moves.include?("233") %>
+        <h1>O</h1>
+      <% end %>
+    </div>
+  <% end %>
+</div>

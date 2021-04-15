@@ -1,0 +1,10 @@
+<h1>Games Index</h1>
+<%= link_to "New Game", games_path, method: :post %>
+<ul>
+  <% @games.each do |game| %>
+    <li>
+      <%= link_to "Enter Game #{game.id}", game_path(game) %>
+      <%= link_to "Delete Game #{game.id}", game_path(game), data: {confirm: "Are you sure"}, method: :delete %>
+    </li>
+  <% end %>
+</ul>
